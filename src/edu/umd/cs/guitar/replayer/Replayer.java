@@ -474,6 +474,8 @@ public class Replayer {
 		}
 
 
+		if(!guitarFailed){
+
 		TestStepEndEventArgs stepEndArgs;
 
 		    stepEndArgs = new TestStepEndEventArgs(step,
@@ -482,6 +484,7 @@ public class Replayer {
 		// Monitor after step
 		for (GTestMonitor aTestMonitor : lTestMonitor) {
 		    aTestMonitor.afterStep(stepEndArgs);
+		}
 		}
 
 	}
